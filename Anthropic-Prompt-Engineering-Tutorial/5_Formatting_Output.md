@@ -51,48 +51,31 @@
 - Claude 也非常擅长输出 JSON 格式
 - 要强制输出 JSON（接近确定但非绝对），可以预填充左花括号 `{`
 
-**教材示例**
-```
-模板: "User: Please write a haiku about {{ANIMAL}}. Use JSON format with 
-       the keys as 'first_line', 'second_line', and 'third_line'.
-       Assistant: {"
-输入: Cat
-```
-预填充 `{` 后，Claude 几乎一定会输出完整的 JSON 对象，而不是先说一句话再输出 JSON。
+- **教材示例**
+    ![alt text](images/16.png)
 
-**注意点**
-- ⚠️ **注意**：预填充 `{` 不能保证 100% JSON 输出，但对于绝大多数场景已经足够可靠
-- 📋 **术语提醒**：`Prefilling(预填充)` = 在 Assistant 回合预先写入引导内容
+- 预填充 `{` 后，Claude 几乎一定会输出完整的 JSON 对象，而不是先说一句话再输出 JSON。
+
+> ⚠️ **注意**：预填充 `{` 不能保证 100% JSON 输出，但对于绝大多数场景已经足够可靠
+
 
 ---
 
 <a id="id4"></a>
 ## ✅ 知识点4: 多变量 + 动态输出标签
 
-**理论**
-教程展示了一个高级组合示例，同时使用：
-- 多个输入变量（`{{EMAIL}}`, `{{ADJECTIVE}}`）
-- XML 标签数据分隔（`<email>...</email>`）
-- 动态输出标签（用变量值作为标签名）
-- 预填充（`Assistant: <{{ADJECTIVE}}_email>`）
+**有了预填充技术后，我们的提示词就可以玩出花来...**
+- 教程展示了一个高级组合示例，同时使用：
+    - 多个输入变量（`{{EMAIL}}`, `{{ADJECTIVE}}`）
+    - XML 标签数据分隔（`<email>...</email>`）
+    - 动态输出标签（用变量值作为标签名）
+    - 预填充（`Assistant: <{{ADJECTIVE}}_email>`）
 
-**教材示例**
-```
-模板:
-User: Hey Claude. Here is an email: <email>{{EMAIL}}</email>. 
-Make this email more {{ADJECTIVE}}. Write the new version in 
-<{{ADJECTIVE}}_email> XML tags.
-Assistant: <{{ADJECTIVE}}_email>
+- **教材示例**
+    ![alt text](images/17.png)
 
-输入 EMAIL: "Hi Zack, just pinging you for a quick update on that prompt..."
-输入 ADJECTIVE: "olde english"
+>💡 **理解技巧**：动态标签名 = 模板的终极形态——变量不仅用于输入数据，还可以用于**生成标签名称**
 
-替换后输出标签: <olde english_email>...</olde english_email>
-```
-
-**注意点**
-- 💡 **理解技巧**：动态标签名 = 模板的终极形态——变量不仅用于输入数据，还可以用于**生成标签名称**
-- 🔄 **知识关联**：这综合了 Ch4（XML 分隔输入）和 Ch5（XML 格式化输出 + 预填充）的全部技术
 
 ---
 

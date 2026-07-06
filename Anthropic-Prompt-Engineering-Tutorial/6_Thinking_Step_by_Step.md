@@ -68,25 +68,18 @@
 ## ✅ 知识点4: 思考让错误变正确——演员示例
 
 **思考使大模型进步...**
-- 通过思考来让 Claude 修正回复是大多数
+- **通过思考来让 Claude 修正回复**是一种十分有效的方法
 
-| 版本 | 提示 | 结果 |
-|------|------|------|
-| 无思考 | `Name a famous movie starring an actor who was born in 1956.` | Claude 给出**错误**答案 |
-| 有思考 | `Name a famous movie starring an actor who was born in 1956. First brainstorm some actors and their birth years in <brainstorm> tags, then give your answer.` | Claude 给出**正确**答案 |
+- **教材示例**
+    - 无思考：Claude 给出**错误**答案 
+        ![alt text](images/21.png)
+    - 有思考：Claude 给出**正确**答案 
+        ![alt text](images/22.png)
 
-- 只需在回答前加一个 `<brainstorm>` 标签引导 Claude 先「头脑风暴」，就能从不正确变为正确
+- 只需在回答前加一个 **`<brainstorm>` 标签 + 提示词**引导  Claude 先「头脑风暴」，就能从不正确变为正确
 - **简单有效**：很多情况下只需让 Claude 先想，就能纠正错误
 
-**教材示例/公式**
-```
-User: Name a famous movie starring an actor who was born in 1956. 
-First brainstorm some actors and their birth years in <brainstorm> tags, 
-then give your answer.
-```
-
-**注意点**
-- 💡 **理解技巧**：`<brainstorm>` 标签本质上是给 Claude 一个「草稿纸」——先打草稿，再交作业
+> 💡 **理解技巧**：`<brainstorm>` 标签本质上是给 Claude 一个「草稿纸」——先打草稿，再交作业
 
 ---
 

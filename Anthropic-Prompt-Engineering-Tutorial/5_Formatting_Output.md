@@ -16,51 +16,38 @@
 <a id="id1"></a>
 ## ✅ 知识点1: 用 XML 标签控制输出格式
 
-**理论**
+**同样我们可以使用 XML 来改善输出质量...**
 - Claude 能以多种方式格式化输出，只需直接要求即可
 - 第4章学会了用 XML 标签让**输入**更清晰，同样可以要求 Claude 用 XML 标签让**输出**更易理解和提取
 - **实际价值**：最终用户可以通过编写简单程序提取标签之间的内容，可靠地获取核心数据
 
-**教材示例**
-```
-模板: "User: Please write a haiku about {{ANIMAL}}. Put it in <haiku> tags."
-输入: Rabbit
-替换后: User: Please write a haiku about Rabbit. Put it in <haiku> tags.
-```
-Claude 会将诗歌放在 `<haiku>...</haiku>` 标签中，便于程序提取。
-
-**注意点**
-- 🔄 **知识关联**：这和第2章「跳过前导语」是同一种需求的不同解决方案——XML 标签分离 vs 直接要求跳过
-- 💡 用 XML 标签比「跳过前导语」更**自动化友好**——程序可以精确提取内容
+- **教材示例**
+    ![alt text](images/14.png)
+- Claude 会将诗歌放在 `<haiku>...</haiku>` 标签中，便于程序提取。
 
 ---
 
 <a id="id2"></a>
 ## ✅ 知识点2: 预填充——替 Claude 说话
 
-**理论**
-- **核心技巧**：在 `Assistant:` 之后放置起始内容，告诉 Claude 「你已经说了这些，请继续」
+**XML的另一种妙用...**
+- **核心技巧**：
+    - 在 `Assistant:` 之后放置起始XML 标签，告诉 Claude “你已经说了这些，请继续”
+    - 而说的那些就是从你标记的第一个 XML 标签开始，然后第二标签收尾
 - 这种技术称为**预填充**(`Prefilling`)或**替 Claude 说话**(`Speaking for Claude`)
 
-**教材示例**
-```
-模板: "User: Please write a haiku about {{ANIMAL}}. Put it in <haiku> tags.
-       Assistant: <haiku>"
-输入: Cat
-```
+- **教材示例**
+![alt text](images/15.png)
 - 在 `Assistant:` 后预填了 `<haiku>`，Claude 会直接输出诗歌内容，然后自然闭合 `</haiku>`
 - **一举两得**：避免了前导语 + XML 标签闭合
 
-**注意点**
-- 💡 **理解技巧**：预填充 = 帮 Claude 起个头，它自然会接着写——就像合唱时你先唱第一句
-- ⚠️ 预填充的内容一定要**合理**——如果你预填了错误的方向，Claude 会顺着错下去
 
 ---
 
 <a id="id3"></a>
 ## ✅ 知识点3: JSON 格式输出 + 预填充
 
-**理论**
+**其他输出格式...**
 - Claude 也非常擅长输出 JSON 格式
 - 要强制输出 JSON（接近确定但非绝对），可以预填充左花括号 `{`
 
@@ -115,7 +102,4 @@ Assistant: <{{ADJECTIVE}}_email>
 3. 预填充 `{` → Claude 几乎一定输出 JSON
 4. 可以组合多变量 + 动态标签名构建高度灵活的提示模板
 
-## 📌 考试速记版
-- **XML 输出**：`Put it in <haiku> tags.`
-- **预填充**：`Assistant: <haiku>` 或 `Assistant: {`
-- **动态标签**：`<{{ADJECTIVE}}_email>` — 变量当标签名
+---

@@ -89,9 +89,9 @@
   - **`system`**：系统指令，定义模型行为、角色、输出格式
   - **`user`**：用户输入，实际的提问或任务
   - **`assistant`**：模型之前的回复，用于多轮对话保持上下文
+  - system + user + assistant 的 messages 数组是**上下文 context** 的核心与主体，用"重要组成部分"
 
-
-- 几乎所有主流 LLM 提供商都支持或兼容 OpenAI 的 Chat Completions 格式：
+- 几乎所有主流 LLM 提供商都支持或兼容 OpenAI 的 Chat Completions 格式
 
 - OpenAI 在 2025-2026 年推出了新的 **Responses API**（`/v1/responses`），不过，由于 Chat Completions 格式已经被整个生态广泛采纳，短期内它仍是最通用的"标准"。
 

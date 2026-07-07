@@ -37,3 +37,7 @@
 |------|------|
 | **Google Sheets 交互式教程** | [Anthropic Prompt Engineering Tutorial](https://docs.google.com/spreadsheets/d/19jzLgRruG9kjUQNKtCg1ZjdD6l6weA6qRXG5zLIAhC8/edit) |
 | **Anthropic 官方文档** | [docs.anthropic.com](https://docs.anthropic.com) |
+
+---
+
+> 💡 想知道这门课和 Andrew Ng 课程的区别？→ 见 [根目录 README 对比表](../README.md#-两门课程的区别)

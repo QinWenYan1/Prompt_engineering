@@ -4,12 +4,22 @@
 
 ---
 
+## 🧠 核心概念总览
+
+- [*知识点1: 让 AI 帮你写图像 Prompt——猫咖啡馆案例*](#id1)
+- [*知识点2: 掌握视觉艺术词汇——这是专家的秘密武器*](#id2)
+- [*知识点3: 扩散模型怎么工作——和文本生成完全不同*](#id3)
+- [*知识点4: AI 图像的三种常见翻车*](#id4)
+
+---
+
 ## 🧠 本课核心
 
 图像生成不只是「输入一句话得到一张图」——本课教你三个层次的技巧：用文字 AI 帮你写图像 prompt、学习视觉艺术词汇来描述风格、理解扩散模型的工作原理。以及 AI 图像最常见的三种翻车模式。
 
 ---
 
+<a id="id1"></a>
 ## ✅ 知识点1: 让 AI 帮你写图像 Prompt——猫咖啡馆案例
 
 **直接想到的 prompt（新手）**
@@ -33,6 +43,7 @@ generate a prompt for an image of a cat secretly running a coffee shop at night.
 
 ---
 
+<a id="id2"></a>
 ## ✅ 知识点2: 掌握视觉艺术词汇——这是专家的秘密武器
 
 **为什么艺术背景的人生成图像更厉害**
@@ -59,6 +70,7 @@ generate a prompt for an image of a cat secretly running a coffee shop at night.
 
 ---
 
+<a id="id3"></a>
 ## ✅ 知识点3: 扩散模型怎么工作——和文本生成完全不同
 
 **文本生成 vs 图像生成**
@@ -87,6 +99,7 @@ generate a prompt for an image of a cat secretly running a coffee shop at night.
 
 ---
 
+<a id="id4"></a>
 ## ✅ 知识点4: AI 图像的三种常见翻车
 
 | 错误类型 | 表现 | 现代模型（NanoBanana）的改进 |

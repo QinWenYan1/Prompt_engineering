@@ -15,45 +15,51 @@
 
 ## 🧠 本课核心
 
-图像生成不只是「输入一句话得到一张图」——本课教你三个层次的技巧：用文字 AI 帮你写图像 prompt、学习视觉艺术词汇来描述风格、理解扩散模型的工作原理。以及 AI 图像最常见的三种翻车模式。
+理解扩散模型的工作原理。以及 AI 图像最常见的三种翻车模式。
 
 ---
 
 <a id="id1"></a>
-## ✅ 知识点1: 让 AI 帮你写图像 Prompt——猫咖啡馆案例
+## ✅ 知识点1: 让 AI 帮你写图像 Prompt
 
-**直接想到的 prompt（新手）**
-```
-一只猫在晚上开咖啡馆
-```
+**图像生成不只是「输入一句话得到一张图」**
 
-**让文字 AI 帮你扩展（高手）**
-```
-生成一个图像 prompt：一只猫在夜间秘密经营一家咖啡馆。
-generate a prompt for an image of a cat secretly running a coffee shop at night.
-```
-→ AI 输出的 prompt 包含：
-- 场景设定（setting）
-- 角色细节（details of the character）
-- 氛围或风格（a mood or a style）
 
-**注意点**
-- 💡 **核心技巧**：文字 AI 比你会写图像 prompt——它知道图像生成模型需要什么描述格式
-- 🔄 这是第 11 课（用 AI 写作）技巧在图像场景的迁移——让 AI 帮你做好「输入」
+
+- **核心技巧**：文字 AI 比你会写图像 prompt——它知道图像生成模型需要什么描述格式
+
+- **直接想到的 prompt（新手）**
+    ```
+    一只猫在晚上开咖啡馆
+    ```
+
+- **让文字 AI 帮你扩展（高手）**
+    ```
+    生成一个图像 prompt：一只猫在夜间秘密经营一家咖啡馆。
+    generate a prompt for an image of a cat secretly running a coffee shop at night.
+    ```
+    → AI 输出的 prompt 包含：
+    - 场景设定（setting）
+    - 角色细节（details of the character）
+    - 氛围或风格（a mood or a style）
+
+- **你可以根据以上特点来自由调整提示词**
+
 
 ---
 
 <a id="id2"></a>
 ## ✅ 知识点2: 掌握视觉艺术词汇——这是专家的秘密武器
 
-**为什么艺术背景的人生成图像更厉害**
-> "艺术爱好者和艺术史爱好者擅长图像 prompt 工程——因为他们有精准的描述语言。"
+**视觉艺术词汇来描述风格**
 
-| 普通描述 | 精准的艺术描述 |
-|---------|-------------|
-| 「好看的风格」 | `cinematic（电影感）`、`watercolor（水彩）`、`cyberpunk（赛博朋克）`、`anime（动漫风）` |
-| 「光线柔和」 | `golden hour lighting（黄金时刻光）`、`chiaroscuro（明暗对照法）` |
-| 「画面很有感觉」 | `ethereal（空灵的）`、`gritty（粗粝的）`、`surreal（超现实的）` |
+- **为什么艺术背景的人生成图像更厉害**：艺术爱好者和艺术史爱好者擅长图像 prompt 工程——因为他们有精准的描述语言
+
+    | 普通描述 | 精准的艺术描述 |
+    |---------|-------------|
+    | 「好看的风格」 | `cinematic（电影感）`、`watercolor（水彩）`、`cyberpunk（赛博朋克）`、`anime（动漫风）` |
+    | 「光线柔和」 | `golden hour lighting（黄金时刻光）`、`chiaroscuro（明暗对照法）` |
+    | 「画面很有感觉」 | `ethereal（空灵的）`、`gritty（粗粝的）`、`surreal（超现实的）` |
 
 **快速学习法**
 1. 找一张你喜欢的 AI 生成图
@@ -120,16 +126,4 @@ generate a prompt for an image of a cat secretly running a coffee shop at night.
 3. 扩散模型从噪声中逐步去噪生成图像——和文本的逐词生成机制完全不同
 4. AI 图像三种老毛病（手、文字、一致性）正在被新模型快速修复
 
-## 📌 实践速查
-
-**写图像 prompt 的标准流程：**
-```
-1. 先对文字 AI 说：
-   「我想生成一张图：[你的想法]。请帮我写一个详细的图像生成 prompt，包括场景、角色、构图、光线、风格。」
-
-2. 把 AI 输出的 prompt 粘贴到图像生成工具中
-
-3. 如果风格不对，加风格词：cinematic / watercolor / cyberpunk / anime / oil painting...
-
-4. 想学新词汇：上传你喜欢的图给 AI，问「describe this image in detail」
-```
+---
